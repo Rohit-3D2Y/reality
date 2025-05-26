@@ -2,7 +2,7 @@ import React from 'react';
 
 const WhyUsSection = () => {
   return (
-    <div className="py-16 px-4 sm:px-6 lg:px-12">
+    <div className="py-10 px-4 sm:px-6 lg:px-12">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">

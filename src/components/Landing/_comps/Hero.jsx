@@ -6,16 +6,25 @@ import {
   ChevronDown,
   ArrowRight,
 } from "lucide-react";
+import { useNavigate } from 'react-router-dom';
+
 
 const Hero = () => {
   const locations = ["Mumbai", "Delhi", "Bangalore"];
   const properties = ["Flat", "Villa", "Plot"];
   const types = ["Rent", "Sale"];
 
+  const navigate = useNavigate();
+
+const handleDiscoverClick = () => {
+  navigate('/discover');
+};
+
+
   return (
     <div className="p-5 lg:p-10 flex flex-col lg:flex-row justify-between gap-12 lg:gap-10">
       {/* Left section */}
-      <div className="flex flex-col gap-6 lg:gap-8 w-full lg:w-1/2 items-center lg:items-center text-center lg:text-center ">
+      <div className="flex flex-col gap-6 lg:gap-8 w-full lg:w-1/2 items-center lg:items-center text-center lg:text-left ">
         {/* Headline */}
         <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl tracking-tighter leading-tight flex flex-col gap-3">
           <h1>
@@ -39,7 +48,7 @@ const Hero = () => {
 
         {/* CTA Buttons */}
         <div className="flex items-center gap-1">
-          <button className="px-5 py-3 text-white bg-[#191c1e] rounded-2xl text-sm sm:text-base">
+          <button   onClick={handleDiscoverClick} className="px-5 py-3 text-white bg-[#191c1e] rounded-2xl text-sm sm:text-base">
             Start Exploring
           </button>
           <div className="bg-[#191c1e] rounded-full h-12 w-12 flex items-center justify-center cursor-pointer hover:bg-[#2a2d2f] transition">
