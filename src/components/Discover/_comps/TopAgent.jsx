@@ -34,7 +34,7 @@ export default function TopAgentsSection() {
   ];
 
   return (
-    <div className="bg-gray-50 py-16 lg:py-20">
+    <div className=" py-16 lg:py-20">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
           {/* Left Side - Header */}
