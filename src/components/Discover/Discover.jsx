@@ -7,7 +7,7 @@ import TopAgentsSection from "./_comps/TopAgent";
 import FeaturedPropertiesSection from "./_comps/FeaturedProperty";
 import PropertyListing from "./_comps/AllProperty";
 
-const Page = () => {
+const Discover = () => {
   return (
     <div>
       <DiscoverHero />
@@ -20,4 +20,4 @@ const Page = () => {
   );
 };
 
-export default Page;
+export default Discover;
