@@ -4,7 +4,7 @@ import Landing from "./components/Landing/Landing";
 import Navbar from "./components/Navbar";
 import Discover from "./components/Discover/Discover";
 import BrokerForm from "./components/Auth/BrokerProfile";
-import RealEstateLogin from "./components/Auth/login";
+import RealEstateLogin from "./components/Auth/Login";
 
 // Wrapper to access location outside Router
 const Layout = () => {
