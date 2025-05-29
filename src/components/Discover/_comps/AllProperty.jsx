@@ -70,10 +70,10 @@ const PropertyCard = ({
           </div>
         </div>
         <div className="flex gap-2">
-          <a href={`tel:${brokerPhone}`} className="p-2 bg-gray-100 rounded-full hover:bg-gray-200 transition">
+          <a href={`tel:${brokerPhone}`} className="p-2 bg-orange-300 rounded-full hover:bg-orange-200 transition">
             <PhoneCall className="w-4 h-4 text-gray-600" />
           </a>
-          <button className="p-2 bg-gray-100 rounded-full hover:bg-gray-200 transition">
+          <button className="p-2 bg-orange-300 rounded-full hover:bg-orange-200 transition">
             <MessageCircle className="w-4 h-4 text-gray-600" />
           </button>
         </div>
