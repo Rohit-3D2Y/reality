@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react'; // You can use Heroicons or SVGs if not using lucide-react
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const navigate = useNavigate();
 
   return (
     <div className="text-black px-6 sm:px-10 py-5 flex justify-between items-center relative">
@@ -16,12 +19,12 @@ const Navbar = () => {
         <div>Home</div>
         <div>Discover</div>
         <div>About Us</div>
-        <div>Register as Broker</div>
+        <div className='cursor-pointer' onClick={()=> {navigate('/broker-profile')}}>Register as Broker</div>
       </div>
 
       {/* Login Button */}
       <div className="hidden md:block">
-        <button className="text-white bg-[#191c1e] px-4 py-2 rounded-2xl">
+        <button className="text-white bg-[#191c1e] px-4 py-2 rounded-2xl" onClick={() => navigate('/login')}>
           Login
         </button>
       </div>
@@ -40,7 +43,7 @@ const Navbar = () => {
           <div>Discover</div>
           <div>About Us</div>
           <div>Register as Broker</div>
-          <button className="text-white bg-[#191c1e] px-4 py-2 rounded-2xl">
+          <button className="text-white bg-[#191c1e] px-4 py-2 rounded-2xl" onClick={()=> navigate('/login')}>
             Login
           </button>
         </div>

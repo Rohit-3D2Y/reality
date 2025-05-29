@@ -21,6 +21,7 @@ const handleDiscoverClick = () => {
 };
 
 
+
   return (
     <div className="p-5 lg:p-10 flex flex-col lg:flex-row justify-between gap-12 lg:gap-10">
       {/* Left section */}
