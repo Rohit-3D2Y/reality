@@ -6,6 +6,7 @@ import DiscoverHero from "./_comps/DiscoverHero";
 import TopAgentsSection from "./_comps/TopAgent";
 import FeaturedPropertiesSection from "./_comps/FeaturedProperty";
 import PropertyListing from "./_comps/AllProperty";
+import CityProperty from "./_comps/CityProperty";
 
 const Discover = () => {
   return (
@@ -13,6 +14,7 @@ const Discover = () => {
       <DiscoverHero />
       <FeaturedPropertiesSection />
       <PropertyListing />
+      <CityProperty />
       <TopAgentsSection />
       <AppDownloadBanner />
       <Footer />
