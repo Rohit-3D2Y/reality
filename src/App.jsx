@@ -5,8 +5,9 @@ import Navbar from "./components/Navbar";
 import Discover from "./components/Discover/Discover";
 import BrokerForm from "./components/Auth/BrokerProfile";
 import RealEstateLogin from "./components/Auth/Login";
+import PropertyExpand from "./components/Discover/discoverExpandSections/PropertyExpand";
+import ScrollToTop from "./components/ScrollToTop";
 
-// Wrapper to access location outside Router
 const Layout = () => {
   const location = useLocation();
 
@@ -15,12 +16,16 @@ const Layout = () => {
 
   return (
     <div className="">
+      {/* ✅ ScrollToTop must be placed here */}
+      <ScrollToTop />
+
       {!shouldHideNavbar && <Navbar />}
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/discover" element={<Discover />} />
         <Route path="/broker-profile" element={<BrokerForm />} />
         <Route path="/login" element={<RealEstateLogin />} />
+        <Route path="/discover/property-expand" element={<PropertyExpand />} />
       </Routes>
     </div>
   );

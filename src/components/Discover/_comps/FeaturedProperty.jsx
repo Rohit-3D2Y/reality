@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { MapPin, Square, Bed, Bath, Sofa, MessageCircle, PhoneCall } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 export default function FeaturedPropertiesSection() {
+  const navigate = useNavigate();
   const properties = [
     {
       id: 1,
@@ -88,7 +90,7 @@ export default function FeaturedPropertiesSection() {
         {/* Header */}
         <div className="flex items-center justify-between mb-12">
           <h2 className="text-3xl lg:text-4xl font-semibold text-[#191c1e] tracking-tighter">Featured <span className='text-orange-500'>properties</span></h2>
-          <button className="text-gray-600 hover:text-gray-900 font-medium border border-gray-800 p-2">
+          <button onClick={()=> navigate("/discover/all-property")} className="text-gray-600 hover:text-gray-900 font-medium border border-gray-800 p-2">
             Browse all properties
           </button>
         </div>
@@ -117,8 +119,9 @@ export default function FeaturedPropertiesSection() {
 }
 
 function PropertyCard({ property }) {
+  const navigate = useNavigate();
   return (
-    <div className="flex flex-col lg:flex-row bg-white rounded-2xl overflow-hidden border border-slate-300">
+    <div className="flex flex-col lg:flex-row bg-white rounded-2xl overflow-hidden border border-slate-300 cursor-pointer" onClick={() => navigate("/discover/property-expand")}>
       {/* Property Image */}
       <div className="lg:w-2/5 relative">
         <div className="h-64 lg:h-80 relative overflow-hidden">
